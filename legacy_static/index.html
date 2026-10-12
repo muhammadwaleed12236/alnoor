@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Al-Noor Mother & Child Health Clinic | Diagnostic Centre</title>
+  <meta name="description" content="Premier Mother & Child Care, Lady Doctor, Maternity & Delivery, 24/7 Medical Store, Pathology Lab, Ultrasound and ECG Services.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Emergency Bar -->
+  <aside class="top-bar" aria-label="Emergency and Working Hours">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <span class="top-badge"><i class="fa-solid fa-bell"></i> 24/7 EMERGENCY</span>
+        <span><i class="fa-solid fa-clock"></i> OPD: 09:00 AM - 10:00 PM | Emergency & Delivery 24/7</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+923119876543" id="topEmergencyCall"><i class="fa-solid fa-phone-volume"></i> Emergency: +92 311 9876543</a>
+        <a href="https://wa.me/923001234567" target="_blank" rel="noopener" id="topWhatsApp"><i class="fa-brands fa-whatsapp"></i> WhatsApp Help</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Navigation -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="#home" class="logo-area" id="logoLink">
+        <div class="logo-icon-box">
+          <i class="fa-solid fa-hand-holding-medical"></i>
+        </div>
+        <div class="logo-text">
+          <h1>Al-Noor Clinic</h1>
+          <span>Maternity & Diagnostic Centre</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#services" class="active">Services</a></li>
+          <li><a href="#doctors">Specialists</a></li>
+          <li><a href="#lab-tests">Lab Directory</a></li>
+          <li><a href="#queue-desk">Live Queue</a></li>
+          <li><a href="#report-portal">Online Reports</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary" id="openBookModalBtn">
+          <i class="fa-regular fa-calendar-check"></i> Book Appointment
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+  <!-- Hero Section -->
+  <section class="hero-section" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge-tag">
+          <i class="fa-solid fa-heart-pulse"></i> Specialized Healthcare for Mother & Family
+        </div>
+        <h1 class="hero-title">
+          Compassionate Care by <br>
+          <span class="highlight-pink">Lady Doctors</span> & Advanced <br>
+          <span class="highlight-teal">Diagnostic Facilities</span>
+        </h1>
+        <p class="hero-description">
+          Welcome to Al-Noor Clinic. We offer 24/7 dedicated maternity & delivery suites, ultrasound scans by female sonologists, automated clinical lab, digital ECG, and round-the-clock pharmacy under one roof.
+        </p>
+        <div class="hero-cta-group">
+          <button class="btn btn-pink" id="heroBookBtn">
+            <i class="fa-solid fa-user-doctor"></i> Book Lady Doctor OPD
+          </button>
+          <a href="#report-portal" class="btn btn-outline" id="heroCheckReportBtn">
+            <i class="fa-solid fa-file-waveform"></i> Track Test Report
+          </a>
+        </div>
+        <div class="hero-highlights">
+          <div class="hl-item">
+            <h4>24/7</h4>
+            <p>Labor Room & Pharmacy</p>
+          </div>
+          <div class="hl-item">
+            <h4>100%</h4>
+            <p>Female Gynecologist Team</p>
+          </div>
+          <div class="hl-item">
+            <h4>15 Mins</h4>
+            <p>Fast Ultrasound & ECG</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Action Floating Card -->
+      <div class="hero-card">
+        <div class="quick-box-title">
+          <span>Patient Quick Desk</span>
+          <span class="badge" style="font-size: 0.72rem; background: #e0f2fe; color: #0284c7; padding: 2px 8px; border-radius: 12px;">Instant Access</span>
+        </div>
+        <p class="quick-box-subtitle">Select a service to generate your OPD Token or check services instantly.</p>
+        
+        <div class="quick-action-list">
+          <div class="qa-card" onclick="openBookingModal('Lady Doctor & Gynae OPD')">
+            <div class="qa-icon pink"><i class="fa-solid fa-user-doctor"></i></div>
+            <div class="qa-info">
+              <h5>Lady Doctor OPD</h5>
+              <p>Consult senior gynecologists & MOs</p>
+            </div>
+            <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #94a3b8;"></i>
+          </div>
+
+          <div class="qa-card" onclick="openBookingModal('Maternity & Delivery Care')">
+            <div class="qa-icon pink"><i class="fa-solid fa-baby-carriage"></i></div>
+            <div class="qa-info">
+              <h5>Maternity & Delivery Care</h5>
+              <p>Safe normal delivery & C-section suites</p>
+            </div>
+            <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #94a3b8;"></i>
+          </div>
+
+          <div class="qa-card" onclick="openBookingModal('Ultrasound Services')">
+            <div class="qa-icon"><i class="fa-solid fa-wave-square"></i></div>
+            <div class="qa-info">
+              <h5>Ultrasound (By Female Sonologist)</h5>
+              <p>Pregnancy scan, Doppler & Abdominal</p>
+            </div>
+            <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #94a3b8;"></i>
+          </div>
+
+          <div class="qa-card" onclick="openBookingModal('Laboratory Testing')">
+            <div class="qa-icon green"><i class="fa-solid fa-microscope"></i></div>
+            <div class="qa-info">
+              <h5>Laboratory Testing</h5>
+              <p>CBC, Blood Sugar, Hormones & Urine</p>
+            </div>
+            <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #94a3b8;"></i>
+          </div>
+
+          <div class="qa-card" onclick="openBookingModal('ECG Services')">
+            <div class="qa-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+            <div class="qa-info">
+              <h5>Instant 12-Lead ECG</h5>
+              <p>Computerized screening with doctor review</p>
+            </div>
+            <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #94a3b8;"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Services Showcase Section -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Clinical Departments</span>
+        <h2>Our Specialized Healthcare Services</h2>
+        <p>Comprehensive patient-centered healthcare delivered by compassionate professionals with modern clinical diagnostics and 24/7 emergency support.</p>
+      </div>
+
+      <div class="services-grid" id="servicesContainer">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Maternal & Delivery Highlight Feature Banner -->
+  <section class="maternity-section">
+    <div class="container maternity-feature-grid">
+      <div>
+        <span class="maternity-tag">Care with Dignity</span>
+        <h2 class="maternity-heading">
+          Safe Motherhood & 24/7 Delivery Facilities
+        </h2>
+        <p class="maternity-desc">
+          Our maternity department is run entirely by female healthcare providers. We ensure total privacy, sterilized private labor rooms, neonatal support, and affordable delivery care packages designed for maternal peace of mind.
+        </p>
+        <ul class="maternity-list">
+          <li>
+            <i class="fa-solid fa-circle-check"></i> Prenatal consultation and high-risk pregnancy management
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i> Normal delivery suites and emergency operative gynecology
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i> Dedicated baby warmer and newborn phototherapy backup
+          </li>
+        </ul>
+        <button class="btn btn-pink" onclick="openBookingModal('Maternity & Delivery Care')">
+          <i class="fa-solid fa-phone"></i> Inquire Maternity Package
+        </button>
+      </div>
+      <div class="maternity-img-wrap">
+        <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80" alt="Maternity Clinic Care">
+      </div>
+    </div>
+  </section>
+
+  <!-- Doctors Roster Section -->
+  <section class="section" id="doctors">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Qualified Medical Staff</span>
+        <h2>Meet Our Doctors & Specialists</h2>
+        <p>Experienced consultants committed to providing accurate diagnosis, empathetic consultation, and tailored treatment plans.</p>
+      </div>
+
+      <div class="doctors-grid" id="doctorsContainer">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Laboratory & Diagnostics Price Catalog -->
+  <section class="section lab-section" id="lab-tests">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Pathology & Diagnostics</span>
+        <h2>Diagnostic Lab & Scan Price Directory</h2>
+        <p>Transparent pricing, automated testing, and accurate turnaround times. Search or filter through our available routine and specialized tests.</p>
+      </div>
+
+      <div class="lab-panel">
+        <div class="lab-filter-bar">
+          <div class="search-input-wrap">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="labSearchInput" placeholder="Search test name (e.g., CBC, Beta hCG, Ultrasound)...">
+          </div>
+          <div style="font-size: 0.85rem; color: var(--gray-500);">
+            <i class="fa-solid fa-circle-info"></i> All samples are processed in computerized automated analyzers.
+          </div>
+        </div>
+
+        <div class="lab-table-container">
+          <table class="custom-table">
+            <thead>
+              <tr>
+                <th>Test Code</th>
+                <th>Diagnostic Test Name</th>
+                <th>Department</th>
+                <th>Turnaround Time</th>
+                <th>Standard Price</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="labTestsTbody">
+              <!-- Rendered dynamically by app.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Receptionist & Token Queue Desk -->
+  <section class="section queue-section" id="queue-desk">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Reception & OPD Queue</span>
+        <h2>Live Token Desk & Patient Flow</h2>
+        <p>Real-time queue monitoring. Patients can view their turn, and clinic receptionists can issue new tokens or update patient statuses instantly.</p>
+      </div>
+
+      <div class="desk-grid">
+        <!-- New Token Registration Form -->
+        <div class="desk-control-card">
+          <div class="card-heading-row">
+            <h3><i class="fa-solid fa-id-card-clip"></i> Issue OPD Token</h3>
+            <span class="badge" style="background: #e0f2fe; color: #0284c7; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem;">Fast Entry</span>
+          </div>
+
+          <form id="quickTokenForm" class="quick-form">
+            <div class="form-group">
+              <label for="tokenPatientName">Patient Full Name *</label>
+              <input type="text" id="tokenPatientName" class="form-control" placeholder="Enter patient name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="tokenServiceSelect">Department / Service *</label>
+              <select id="tokenServiceSelect" class="form-control" required>
+                <option value="Lady Doctor">Lady Doctor (Gynecology OPD)</option>
+                <option value="Maternity Care">Maternity & Delivery Care</option>
+                <option value="Ultrasound">Ultrasound (Female Sonologist)</option>
+                <option value="Laboratory">Laboratory Testing</option>
+                <option value="ECG">ECG Screening</option>
+                <option value="Pharmacy">Medical Store / Pharmacy</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="tokenPatientPhone">Phone / WhatsApp</label>
+              <input type="tel" id="tokenPatientPhone" class="form-control" placeholder="0300-XXXXXXX">
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
+              <i class="fa-solid fa-ticket"></i> Generate OPD Token Slip
+            </button>
+          </form>
+        </div>
+
+        <!-- Live Queue Board -->
+        <div class="queue-board-card">
+          <div class="card-heading-row">
+            <h3>
+              <i class="fa-solid fa-users"></i> Current OPD Queue
+            </h3>
+            <div class="live-indicator">
+              <div class="live-dot"></div> Live Board
+            </div>
+          </div>
+
+          <div class="queue-list" id="queueListContainer">
+            <!-- Queue items rendered dynamically -->
+          </div>
+
+          <div style="margin-top: 1rem; font-size: 0.8rem; color: var(--gray-500); display: flex; justify-content: space-between;">
+            <span><i class="fa-solid fa-info-circle"></i> Click status badge to cycle: Waiting &rarr; In-Consultation &rarr; Completed</span>
+            <span id="queueCount">Total: 4</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Online Report Verification Banner -->
+  <section class="container" id="report-portal">
+    <div class="report-banner">
+      <div class="container report-banner-inner">
+        <div class="report-banner-text">
+          <span style="background: rgba(255,255,255,0.2); padding: 3px 10px; border-radius: 20px; font-size: 0.75rem; text-transform: uppercase; font-weight: 700;">Diagnostic Portal</span>
+          <h3>Online Patient Diagnostic Reports</h3>
+          <p>Already got a test done? Enter your Report ID or Token number to view and print your lab, ultrasound, or ECG report online.</p>
+          <div style="margin-top: 0.75rem; font-size: 0.82rem; color: #94a3b8;">
+            Try demo IDs: 
+            <button class="btn btn-sm" style="background: rgba(255,255,255,0.15); color: #fff; margin-left: 4px;" onclick="searchReport('REP-101')">REP-101 (Ultrasound)</button>
+            <button class="btn btn-sm" style="background: rgba(255,255,255,0.15); color: #fff; margin-left: 4px;" onclick="searchReport('REP-102')">REP-102 (Lab/Pregnancy)</button>
+            <button class="btn btn-sm" style="background: rgba(255,255,255,0.15); color: #fff; margin-left: 4px;" onclick="searchReport('REP-103')">REP-103 (ECG)</button>
+          </div>
+        </div>
+
+        <form id="reportSearchForm" class="report-search-box">
+          <input type="text" id="reportIdInput" placeholder="Enter Report ID (e.g. REP-101)" required>
+          <button type="submit" class="btn btn-pink">
+            <i class="fa-solid fa-magnifying-glass"></i> View Report
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pharmacy Feature Section -->
+  <section class="section pharmacy-section">
+    <div class="container pharmacy-feature-grid">
+      <div class="pharmacy-img-wrap">
+        <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=700&q=80" alt="Clinic Pharmacy">
+      </div>
+      <div>
+        <span class="section-tag pharmacy-tag">24/7 Medical Store</span>
+        <h2 class="pharmacy-heading">
+          In-House Pharmacy & Genuine Medicines
+        </h2>
+        <p class="pharmacy-desc">
+          We stock comprehensive mother & baby healthcare items, routine gynecological medicines, surgical disposables, temperature-sensitive vaccines, and emergency cardiovascular medications.
+        </p>
+        <div class="pharmacy-perks-grid">
+          <div class="pharmacy-perk-card">
+            <h5><i class="fa-solid fa-truck-medical" style="color: var(--primary);"></i> Free Local Delivery</h5>
+            <p>Within 3 km radius for urgent prescriptions.</p>
+          </div>
+          <div class="pharmacy-perk-card">
+            <h5><i class="fa-solid fa-shield-virus" style="color: var(--primary);"></i> 100% Guaranteed</h5>
+            <p>Sourced directly from licensed pharmaceutical distributors.</p>
+          </div>
+        </div>
+        <a href="https://wa.me/923001234567?text=Hi,%20I%20want%20to%20inquire%20about%20medicines%20from%20Al-Noor%20Pharmacy" target="_blank" class="btn btn-primary" id="pharmacyWaBtn">
+          <i class="fa-brands fa-whatsapp"></i> Order Medicines via WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Emergency Section -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Reach Us</span>
+        <h2>Visit Al-Noor Clinic & Diagnostics</h2>
+        <p>Easily accessible central location with ample parking and dedicated ambulance access.</p>
+      </div>
+
+      <div class="contact-cards-grid">
+        <div class="contact-card">
+          <div class="contact-card-icon blue">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <h4>Clinic Address</h4>
+          <p>Healthcare Plaza, Block C, Main Boulevard, Near Civil Hospital</p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-card-icon pink">
+            <i class="fa-solid fa-phone-volume"></i>
+          </div>
+          <h4>Emergency & Helpline</h4>
+          <p>24/7 Hotlines: <br><strong>+92 311 9876543</strong><br>+92 300 1234567</p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-card-icon green">
+            <i class="fa-solid fa-clock"></i>
+          </div>
+          <h4>Operational Hours</h4>
+          <p>Labor Room & Medical Store: <strong>24/7</strong><br>OPD & Lab: 09:00 AM - 10:00 PM</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo-area" style="margin-bottom: 1.25rem;">
+            <div class="logo-icon-box" style="background: var(--primary);">
+              <i class="fa-solid fa-hand-holding-medical"></i>
+            </div>
+            <div class="logo-text">
+              <h1 style="color: #fff; font-size: 1.15rem;">Al-Noor Clinic</h1>
+              <span style="color: #38bdf8;">Mother & Child Care</span>
+            </div>
+          </div>
+          <p>
+            Dedicated maternal, diagnostic, and family healthcare clinic delivering high precision clinical testing, expert lady doctor consultations, and 24/7 emergency services.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Clinical Services</h4>
+          <div class="footer-links">
+            <a href="#services"><i class="fa-solid fa-angle-right"></i> Lady Doctor OPD</a>
+            <a href="#services"><i class="fa-solid fa-angle-right"></i> Maternity & Delivery Care</a>
+            <a href="#services"><i class="fa-solid fa-angle-right"></i> Ultrasound Services</a>
+            <a href="#services"><i class="fa-solid fa-angle-right"></i> Laboratory Testing</a>
+            <a href="#services"><i class="fa-solid fa-angle-right"></i> Instant 12-Lead ECG</a>
+            <a href="#services"><i class="fa-solid fa-angle-right"></i> 24/7 Medical Store</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Access</h4>
+          <div class="footer-links">
+            <a href="#home"><i class="fa-solid fa-angle-right"></i> Book Appointment</a>
+            <a href="#report-portal"><i class="fa-solid fa-angle-right"></i> Download Reports</a>
+            <a href="#queue-desk"><i class="fa-solid fa-angle-right"></i> Live OPD Queue</a>
+            <a href="#lab-tests"><i class="fa-solid fa-angle-right"></i> Lab Test Rates</a>
+            <a href="#doctors"><i class="fa-solid fa-angle-right"></i> Specialist Doctors</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Clinic</h4>
+          <ul class="footer-contact-list">
+            <li><i class="fa-solid fa-location-dot"></i> Healthcare Plaza, Block C, Main Boulevard</li>
+            <li><i class="fa-solid fa-phone"></i> +92 311 9876543 (Emergency)</li>
+            <li><i class="fa-solid fa-clock"></i> Open 24/7 for Emergencies</li>
+            <li><i class="fa-solid fa-envelope"></i> care@alnoorclinic.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Al-Noor Mother & Child Clinic & Diagnostic Centre. All rights reserved.</p>
+        <p>Built for Static Deployment & Zero-Configuration Execution.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL 1: APPOINTMENT BOOKING & PRINTABLE TOKEN SLIP
+       ========================================================================== -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="bookingModalTitle"><i class="fa-regular fa-calendar-check" style="color: var(--primary);"></i> Book Clinic Appointment</h3>
+        <button class="modal-close-btn" onclick="closeModal('bookingModal')"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <div id="bookingFormSection">
+          <form id="appointmentForm" class="quick-form">
+            <div class="form-group">
+              <label for="modalPatientName">Patient Full Name *</label>
+              <input type="text" id="modalPatientName" class="form-control" placeholder="e.g. Fatima Tariq" required>
+            </div>
+
+            <div class="form-row-2col">
+              <div class="form-group">
+                <label for="modalPatientAge">Age</label>
+                <input type="text" id="modalPatientAge" class="form-control" placeholder="e.g. 28 Yrs">
+              </div>
+              <div class="form-group">
+                <label for="modalPatientGender">Gender</label>
+                <select id="modalPatientGender" class="form-control">
+                  <option value="Female">Female</option>
+                  <option value="Male">Male</option>
+                  <option value="Child">Child</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="modalServiceSelect">Service Required *</label>
+              <select id="modalServiceSelect" class="form-control" required>
+                <option value="Lady Doctor & Gynae OPD">Lady Doctor & Gynae OPD</option>
+                <option value="Maternity & Delivery Care">Maternity & Delivery Care</option>
+                <option value="Ultrasound Services (USG)">Ultrasound Services (USG)</option>
+                <option value="Laboratory Testing">Laboratory Testing</option>
+                <option value="ECG Services">ECG Services</option>
+                <option value="Medical Store (Pharmacy)">Medical Store (Pharmacy)</option>
+              </select>
+            </div>
+
+            <div class="form-row-2col">
+              <div class="form-group">
+                <label for="modalAppDate">Preferred Date</label>
+                <input type="date" id="modalAppDate" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="modalAppSlot">Shift / Slot</label>
+                <select id="modalAppSlot" class="form-control">
+                  <option value="Morning (10:00 AM - 01:00 PM)">Morning (10:00 AM - 01:00 PM)</option>
+                  <option value="Evening (05:00 PM - 09:00 PM)">Evening (05:00 PM - 09:00 PM)</option>
+                  <option value="Emergency (Immediate)">Emergency (Immediate)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="modalPatientPhone">Contact Phone Number *</label>
+              <input type="tel" id="modalPatientPhone" class="form-control" placeholder="0300-1234567" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
+              <i class="fa-solid fa-circle-check"></i> Confirm & Generate Token Slip
+            </button>
+          </form>
+        </div>
+
+        <!-- Generated Token Result (Hidden initially, visible upon booking) -->
+        <div id="bookingResultSection" style="display: none;">
+          <div class="printable-area" id="tokenSlipArea">
+            <div class="token-slip">
+              <div class="token-slip-header">
+                <h4 style="font-size: 1.15rem; font-weight: 800; color: var(--primary);">Al-Noor Mother & Child Clinic</h4>
+                <p style="font-size: 0.75rem; color: var(--gray-500);">OPD & DIAGNOSTIC APPOINTMENT TOKEN</p>
+              </div>
+
+              <div class="token-number-box" id="resTokenNumber">
+                TK-2026-999
+              </div>
+
+              <div class="token-details-grid">
+                <p><strong>Patient:</strong> <span id="resPatientName">Fatima</span></p>
+                <p><strong>Service:</strong> <span id="resService">Lady Doctor</span></p>
+                <p><strong>Date:</strong> <span id="resDate">12-Oct-2026</span></p>
+                <p><strong>Slot:</strong> <span id="resSlot">Morning</span></p>
+                <p><strong>MR Number:</strong> <span id="resMRN">MR-9120</span></p>
+                <p><strong>Fee Status:</strong> <span>Pay at Reception</span></p>
+              </div>
+
+              <p style="font-size: 0.75rem; color: var(--gray-500); margin-bottom: 0.5rem;">
+                Please present this token at the reception desk 15 minutes before your time slot.
+              </p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 0.75rem; margin-top: 1.25rem;" class="no-print">
+            <button class="btn btn-primary" style="flex: 1;" onclick="printElement('tokenSlipArea')">
+              <i class="fa-solid fa-print"></i> Print Token Slip
+            </button>
+            <button class="btn btn-outline" style="flex: 1;" onclick="resetBookingForm()">
+              <i class="fa-solid fa-plus"></i> New Appointment
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 2: MEDICAL REPORT VIEWER & PDF PRINT VIEW
+       ========================================================================== -->
+  <div class="modal-overlay" id="reportModal">
+    <div class="modal-content modal-report-size">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-file-waveform" style="color: var(--primary);"></i> Diagnostic Test Report</h3>
+        <button class="modal-close-btn" onclick="closeModal('reportModal')"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="printable-area" id="diagnosticReportArea">
+          <div class="report-paper">
+            <div class="report-clinic-header">
+              <div>
+                <h2 style="font-size: 1.35rem; font-weight: 800; color: var(--primary);">Al-Noor Clinic & Diagnostics</h2>
+                <p style="font-size: 0.75rem; color: var(--gray-500);">ISO 9001:2015 Compliant Clinical Laboratory & Ultrasound Centre</p>
+                <p style="font-size: 0.75rem; color: var(--gray-500);">Main Boulevard, Healthcare Plaza | Ph: +92 311 9876543</p>
+              </div>
+              <div style="text-align: right;">
+                <span class="badge" style="background: #dcfce7; color: #166534; font-size: 0.8rem; font-weight: 800; padding: 4px 10px; border-radius: 4px;">VERIFIED REPORT</span>
+                <p style="font-size: 0.75rem; color: var(--gray-500); margin-top: 4px;" id="repIssueDate">Date: 12-Oct-2026</p>
+              </div>
+            </div>
+
+            <!-- Patient Information Bar -->
+            <div class="report-patient-meta">
+              <div><strong>Patient Name:</strong> <span id="repPatientName">-</span></div>
+              <div><strong>Age / Gender:</strong> <span id="repPatientAge">-</span></div>
+              <div><strong>MR Number:</strong> <span id="repMRN">-</span></div>
+              <div><strong>Referring Doctor:</strong> <span id="repDoctor">-</span></div>
+              <div><strong>Diagnostic Category:</strong> <span id="repCategory">-</span></div>
+              <div><strong>Report ID:</strong> <span id="repReportId">-</span></div>
+            </div>
+
+            <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--dark); margin-bottom: 0.75rem;" id="repTestTitle">
+              Test Investigation Title
+            </h4>
+
+            <!-- Parameters Table -->
+            <table class="report-table">
+              <thead>
+                <tr>
+                  <th>Investigation Parameter</th>
+                  <th>Observed Value</th>
+                  <th>Reference / Normal Interval</th>
+                </tr>
+              </thead>
+              <tbody id="repFindingsBody">
+                <!-- Injected via app.js -->
+              </tbody>
+            </table>
+
+            <!-- Clinical Impression -->
+            <div class="report-impression">
+              <strong style="color: var(--primary); display: block; margin-bottom: 4px;"><i class="fa-solid fa-stethoscope"></i> Clinical Impression / Remarks:</strong>
+              <p id="repImpressionText">-</p>
+            </div>
+
+            <!-- Signatures -->
+            <div class="report-signatures">
+              <div>
+                <p>Medical Technologist</p>
+                <strong style="color: var(--dark); font-size: 0.75rem;">Verified by Senior Tech</strong>
+              </div>
+              <div style="text-align: right;">
+                <p>Consultant In-Charge</p>
+                <strong style="color: var(--dark); font-size: 0.85rem;" id="repConsultantName">Dr. Pathologist / Radiologist</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 1.5rem;" class="no-print">
+          <button class="btn btn-primary" onclick="printElement('diagnosticReportArea')">
+            <i class="fa-solid fa-print"></i> Print Official Report
+          </button>
+          <button class="btn btn-outline" onclick="closeModal('reportModal')">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Mobile Quick Actions Bar (Mobile Only) -->
+  <aside class="mobile-bottom-bar" id="mobileBottomBar" aria-label="Mobile Quick Actions">
+    <a href="tel:+923119876543" class="mobile-bar-btn call-btn">
+      <i class="fa-solid fa-phone-volume"></i>
+      <span>Emergency</span>
+    </a>
+    <button class="mobile-bar-btn book-btn" onclick="openBookingModal('Lady Doctor & Gynae OPD')">
+      <i class="fa-solid fa-calendar-check"></i>
+      <span>Book OPD</span>
+    </button>
+    <a href="https://wa.me/923001234567" target="_blank" rel="noopener" class="mobile-bar-btn wa-btn">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>WhatsApp</span>
+    </a>
+  </aside>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
